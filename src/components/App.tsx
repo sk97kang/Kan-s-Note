@@ -87,7 +87,7 @@ class App extends React.Component<{}, IState> {
 
   loadLS = (): void => {
     const notes = localStorage.getItem("notes");
-    if (notes === null) {
+    if (notes === null || notes === "[]") {
       return;
     }
     const parsedNotes = JSON.parse(notes);
